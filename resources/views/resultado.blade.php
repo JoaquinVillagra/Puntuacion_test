@@ -21,12 +21,10 @@
   				<div id="login-form" class="span12">
             <form method="post" action="/consulta">
   						<div class="row-fluid">
-  							<input class="span12" id="user" name="user" type="text" value="" placeholder="Usuario github"/>
-  							<!--<input class="span12" id="pass" name="pass" type="text" value="" placeholder="password"/>
+                <h3> La puntuacion del usuario es: {{ $puntuacion }}</h3>
+  							<!--<input class="span12" id="user" name="user" type="text" value="" placeholder="Usuario github"/>
+  							<input class="span12" id="pass" name="pass" type="text" value="" placeholder="password"/>
   							<input class="span12" id="confpass" name="confpass" type="text" value="" placeholder="confirm password"/>-->
-  						</div>
-  						<div class="actions">
-  							<button type="submit" class="btn btn-primary span12">Consultar Puntuación</button>
   						</div>
   					</form>
   				</div>

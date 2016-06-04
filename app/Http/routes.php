@@ -15,4 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/consulta', 'PuntuacionController@consulta') ;
+
 #Route::get('', "userController@metodoName");
