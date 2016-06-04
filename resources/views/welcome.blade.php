@@ -1,45 +1,44 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
+<div class="container">
+  <!-- start: Page Title -->
+	<div class="row-fluid">
+	<div id="page-title" class="span4 offset4">
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+		<h2>Consulta la puntuación tuya y de otros usuarios de Github</h2>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
+	</div>
+	</div>
+	<!-- end: Page Title -->
+  <!--start: Row-->
+  <div class="row-fluid">
+  	<div class="lr-page span4 offset4">
+  		<!--start: Register Box-->
+  		<div id="register-box">
+  			<!-- start: Row -->
+  			<div class="row-fluid">
+  				<div id="login-form" class="span12">
+            <form method="post" action="">
+  						<div class="row-fluid">
+  							<input class="span12" id="user" name="user" type="text" value="" placeholder="username"/>
+  							<input class="span12" id="pass" name="pass" type="text" value="" placeholder="password"/>
+  							<input class="span12" id="confpass" name="confpass" type="text" value="" placeholder="confirm password"/>
+  						</div>
+  						<div class="actions">
+  							<button type="submit" class="btn btn-primary span12">Create Account!</button>
+  						</div>
+  					</form>
+  				</div>
+  			</div>
+  			<!-- end: Row -->
+  		</div>
+  		<!--end: Register Box-->
+  	</div>
+  </div>
+  <!--end: Row -->
+</div>
+<!--end: Container-->
 
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
 
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
-        </div>
-    </body>
-</html>
+@endsection

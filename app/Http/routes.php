@@ -16,4 +16,3 @@ Route::get('/', function () {
 });
 
 #Route::get('', "userController@metodoName");
-
