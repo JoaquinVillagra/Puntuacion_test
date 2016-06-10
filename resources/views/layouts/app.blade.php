@@ -28,8 +28,8 @@
                       <a class="brand" href="/"><image src="{{ asset('images/logo.png')}}"> Puntuación-Test</a>
                       <div class="nav-collapse collapse">
                         <ul class="nav">
-                    <li ><a href="index.html">Inicio<span>Comienza aquí</span></a></li>
-                    <li class="active"><a href="register.html">Consutla<span>Puntuación</span></a></li>
+                    <!--<li ><a href="\">Inicio<span>Comienza aquí</span></a></li>-->
+                    <li class="active"><a href="/">Consutla<span>Puntuación</span></a></li>
                         </ul>
                       </div>
                   </div>
