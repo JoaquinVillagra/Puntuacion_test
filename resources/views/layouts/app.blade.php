@@ -59,7 +59,7 @@
       				<!-- end: Under Footer Copyright -->
       				<!-- start: Under Footer Back To Top -->
       				<!--<div class="span2">
-      					<div id="under-footer-back-to-top">
+      				    <div id="under-footer-back-to-top">
       						<a href="#"></a>
       					</div>
       				</div>-->

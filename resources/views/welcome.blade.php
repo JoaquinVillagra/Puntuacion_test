@@ -20,6 +20,7 @@
   			<div class="row-fluid">
   				<div id="login-form" class="span12">
             <form method="post" action="/consulta">
+						{{csrf_field()}}
   						<div class="row-fluid">
   							<input class="span12" id="user" name="user" type="text" value="" placeholder="Usuario github"/>
   							<!--<input class="span12" id="pass" name="pass" type="text" value="" placeholder="password"/>

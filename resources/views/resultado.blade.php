@@ -21,7 +21,7 @@
   				<div id="login-form" class="span12">
             <form method="post" action="/consulta">
   						<div class="row-fluid">
-                <h3> La puntuacion del usuario es: {{ $puntuacion }}</h3>
+                <h3> La puntuacion del usuario es: {{ $puntaje }}</h3>
   							<!--<input class="span12" id="user" name="user" type="text" value="" placeholder="Usuario github"/>
   							<input class="span12" id="pass" name="pass" type="text" value="" placeholder="password"/>
   							<input class="span12" id="confpass" name="confpass" type="text" value="" placeholder="confirm password"/>-->
