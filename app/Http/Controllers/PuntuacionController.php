@@ -14,11 +14,10 @@ class PuntuacionController extends Controller
         $usuario = $request->input('user');
         /* Consulta puntuacion del usuario según la versión 1 */
         $puntajeEventos = $this->consultaApiVersion1($usuario);
-        $seguidores = obtenerSeguidores($usuario);
-        $estrellas  = obtenerEstrellas($usuario);
-        /* Se calcula el puntaje total del usuario*/
-        $puntaje = 0,4 * $puntajeEventos + 0,2 * $seguidores + 0,4 * $estrellas;
-        return view('resultado', compact("puntaje, seguidores, estrellas"));
+        $seguidores = $this->obtenerSeguidores($usuario);
+        $estrellas  = $this->obtenerEstrellas($usuario);
+        $puntaje = 0.4 * $puntajeEventos + 0.2 * $seguidores + 0.4 * $estrellas;
+        return view('resultado', compact("puntaje", "seguidores", "estrellas"));
     }
 
     private function consultaApiVersion1($usuario)
@@ -53,7 +52,7 @@ class PuntuacionController extends Controller
         ]);
         $response  = $cliente->request('GET', "{$usuario}");
         $resultado = json_decode($response->getBody(), true);
-        $numeroSeguidores = $response['followers'];
+        $numeroSeguidores = intval($resultado["followers"]);
         return $numeroSeguidores;
     }
 
@@ -62,9 +61,12 @@ class PuntuacionController extends Controller
         $cliente   = new Client([
             'base_uri' => 'https://api.github.com/users/'
         ]);
-        $response  = $cliente->request('GET', "{$usuario}");
+        $response  = $cliente->request('GET', "{$usuario}/repos");
         $resultado = json_decode($response->getBody(), true);
-        $numeroEstrellas = $response['followers'];
-        return $numeroEstrellas;
+        $estrellas = 0;
+        foreach ($resultado as $repositorio) {
+            $estrellas = $estrellas + intval($repositorio['stargazers_count']);
+        }
+        return $estrellas;
     }
 }
